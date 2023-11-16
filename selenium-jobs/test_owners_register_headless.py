@@ -14,9 +14,9 @@ driver = webdriver.Chrome(options=chrome_options)
 
 # Connect to the application
 APP_IP = os.environ['MASTER_PUBLIC_IP']
-url = "http://"+APP_IP.strip()+":8080/"
-print(url)
-driver.get(url)
+url = "http://"+APP_IP.strip()+":30001/"
+APP_IP = os.environ['MASTER_PUBLIC_IP']
+url = "http://"+APP_IP.strip()+":30001/"
 owners_link = driver.find_element("link text", "OWNERS")
 owners_link.click()
 sleep(2)
